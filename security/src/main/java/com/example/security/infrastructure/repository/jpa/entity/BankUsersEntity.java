@@ -1,6 +1,8 @@
 package com.example.security.infrastructure.repository.jpa.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -9,6 +11,11 @@ import com.example.security.domain.Gender;
 @Entity
 @Table(name = "bank_user")
 @Inheritance(strategy = InheritanceType.JOINED)
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(callSuper = true)
+
 public class BankUsersEntity {
 
     @Id
